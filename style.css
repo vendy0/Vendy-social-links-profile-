@@ -1,0 +1,193 @@
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Prevent font size inflation */
+html {
+  -moz-text-size-adjust: none;
+  -webkit-text-size-adjust: none;
+  text-size-adjust: none;
+}
+
+/* Remove default margin in favour of better control in authored CSS */
+body, h1, h2, h3, h4, p,
+figure, blockquote, dl, dd {
+  margin-block-end: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role='list'],
+ol[role='list'] {
+  list-style: none;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  line-height: 1.5;
+}
+
+/* Set shorter line heights on headings and interactive elements */
+h1, h2, h3, h4,
+button, input, label {
+  line-height: 1.1;
+}
+
+/* Balance text wrapping on headings */
+h1, h2,
+h3, h4 {
+  text-wrap: balance;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+  color: currentColor;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input, button,
+textarea, select {
+  font-family: inherit;
+  font-size: inherit;
+}
+
+/* Make sure textareas without a rows attribute are not tiny */
+textarea:not([rows]) {
+  min-height: 10em;
+}
+
+/* Anything that has been anchored to should have extra scroll margin */
+:target {
+  scroll-margin-block: 5ex;
+}
+
+
+
+@font-face {
+  font-family: "inter";
+  src: url(./assets/fonts/Inter-VariableFont_slnt\,wght.ttf) format(truetype);
+  font-weight: 100 900;
+  font-style: normal;
+}
+
+:root {
+  --clr-green: hsl(75, 94%, 57%);
+
+  --clr-white: hsl(0, 0%, 100%);
+
+  --clr-grey-700: hsl(0, 0%, 20%);
+  --clr-grey-800: hsl(0, 0%, 12%);
+  --clr-grey-900: hsl(0, 0%, 8%);
+}
+body {
+  position: relative;
+  font-weight: bold;
+  color: var(--clr-white);
+  font-family: "inter", sans-serif;
+  min-height: 100vh;
+  min-width: 100vw;
+  background: var(--clr-grey-900);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.profil-container {
+  background: var(--clr-grey-800);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 10px;
+  margin: 20px;
+  padding: 40px 20px;
+  max-width: 400px;
+  border: 1px solid var(--clr-grey-700);
+  box-shadow: 10px 10px 10px #355e3b, 5px 5px 10px #6a9f59 inset;
+}
+
+img {
+  margin: 0;
+  border-radius: 50%;
+  max-inline-size: 100%;
+  aspect-ratio: 2/1;
+	object-fit: cover;
+	object-position: top center;
+}
+.user-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 20px;
+}
+.user-name {
+  font-size: 1.6em;
+  margin: 7px;
+  font-weight: 500;
+}
+.user-adress {
+  color: var(--clr-green);
+  font-size: 0.9em;
+}
+
+.user-description {
+  font-size: 14px;
+  margin: 10px;
+  font-weight: 400;
+}
+
+footer{
+	width: 100%;
+}
+ul{
+	padding: 0;
+	margin: 0;
+	list-style-position: inside;
+	list-style-type: none;
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+	margin-top: 10px;
+}
+li{
+	margin: 10px 0;
+	background: var(--clr-grey-700);
+	padding: 15px;
+	text-align: center;
+	width: 100%;
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	border-radius: 10px;
+	width: 100%;
+	transition: all 0.5s ease;
+}
+a {
+	text-decoration: none;
+	color: var(--clr-white);
+}
+	li:hover, li:hover a{
+		background: var(--clr-green);
+		text-decoration: none;
+		color: var(--clr-grey-900);
+	}
+	
+	li:active, li:active a{
+			background: green;
+}
+hr{
+	opacity: 0.2;
+	width:100%
+}
